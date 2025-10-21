@@ -1,0 +1,47 @@
+#ai {
+  grid-area: ai;
+
+  & article {
+    direction: rtl;
+  }
+
+  & article>* {
+    direction: ltr;
+  }
+
+  img {
+    width: 80px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  h3 {
+    margin-block: 8px 4px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (width >=60em) {
+  #ai {
+    img {
+      width: 176px;
+    }
+
+    & article {
+      direction: ltr;
+    }
+  }
+}
