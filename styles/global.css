@@ -47,8 +47,8 @@ img {
 }
 
 .container {
-  max-width: 1280px;
-  padding-inline: 32px;
+  max-width: 80rem;
+  padding-inline: 1rem;
   margin-inline: auto;
 }
 
@@ -75,4 +75,10 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
+}
+
+@media (width >=60em) {
+  .container {
+    padding-inline: 2em;
+  }
 }

@@ -1,0 +1,66 @@
+#featured {
+  grid-area: featured;
+
+  & figure {
+    height: 12.5rem;
+  }
+
+  &>figure {
+    height: 25rem;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      top: 50%;
+      background: linear-gradient(180deg, transparent 0%, #020617);
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+
+      padding: 24px;
+
+      &:has(.text-lg) {
+        padding: 12px;
+      }
+
+      h2 {
+        margin-top: 8px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+@media (width >=38em) {
+  #featured {
+    grid-auto-flow: column;
+
+    &>figure {
+      height: auto;
+    }
+
+    &>div {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
