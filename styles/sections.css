@@ -20,42 +20,6 @@ section header {
   }
 }
 
-#weekly {
-  grid-area: weekly;
-
-  &>div {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  img {
-    height: 160px;
-  }
-
-  figure {
-    position: relative;
-
-    .content-tag {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-    }
-
-    figcaption {
-      margin-top: 8px;
-
-      p {
-        font-weight: 800;
-
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-  }
-}
-
 #ai {
   grid-area: ai;
 
